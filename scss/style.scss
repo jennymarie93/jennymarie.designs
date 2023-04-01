@@ -1,0 +1,70 @@
+/* GLOBAL RESETS */
+* { box-sizing: border-box; }
+
+// VARIABLES
+$color-background: rgb(240, 231, 233);
+$color-text-body: rgba( 0, 0, 0,.75);
+$type-base: "Trebuchet MS", Tahoma, sans-serif;
+$type-heading: mr-eaves-modern, sans-serif;
+$type-subheading: mr-eaves-modern, sans-serif;
+$type-linewidth: 37em;
+
+//COLORS
+$type-color: rgb(83, 76, 84);
+$type-color-lightgrey: rgba(0, 0, 0, 0.5);
+$accent-color: rgb(130, 84, 106);
+$accent-color-lines: rgb(156, 154, 154);
+$accent-color-light: rgba(229, 237, 235, 0.445);
+$accent-color-white: rgba(255, 255, 255, 1);
+$accent-color-red: rgb(222, 119, 99);
+$accent-color-strawberry: rgb(202, 20, 47);
+$accent-color-orange: rgb(244, 174, 106);
+$accent-color-orange-50: rgba(244, 174, 106, .50);
+$accent-color-yellow: rgb(248, 219, 114);
+$accent-color-green: rgb(177, 180, 101);
+$accent-color-blue: rgb(167, 217, 208);
+$accent-color-turquoise: rgb(33, 181, 166);
+$accent-color-purple: rgb(130, 84, 106);
+
+$photo1: background-image url(/myportfolio/sassyportfolio/img/Juxtaposition_JZ.jpg);
+
+//BREAKPOINTS
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+//IMPORTS
+@import "partials/toc";
+@import "partials/typography";
+@import "partials/buttons"; 
+@import "partials/media";
+@import "partials/helpers";
+@import "partials/layout";
+@import "partials/grid";
+@import "partials/structure";
+@import "partials/site-nav";
+
+
+// <-- ADOBE FONTS -->
+
+// ITC Avant Garde Gothic Pro Medium
+//     font-family: itc-avant-garde-gothic-pro, sans-serif;
+//     font-weight: 500;
+//     font-style: normal;
+
+// Dejanire Headline Medium
+//     font-family: dejanire-headline, serif;
+//     font-weight: 500;
+//     font-style: normal;
+
+// Arboria Book
+//     font-family: arboria, sans-serif;
+//     font-weight: 400;
+//     font-style: normal;
+
+// Basic Sans ExtraLight It
+//     font-family: basic-sans, sans-serif;
+//     font-weight: 200;
+//     font-style: italic;
+    
+       

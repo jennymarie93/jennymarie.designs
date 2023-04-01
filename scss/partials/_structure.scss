@@ -1,0 +1,90 @@
+/* SITE STRUCTURE */
+
+/* SITE HEADER */
+
+.site-header{
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+
+    .site-id {
+        display: flex;
+        align-items: center;
+    }
+
+    .logomark {
+        margin-right: 1em;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    h1 {
+        font-size: 1.05em;
+        font-family: $type-heading;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+} 
+
+/* SITE FOOTER */
+
+.site-footer {
+    background: $accent-color-yellow;
+    display: flex;
+    justify-content: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+section {
+    padding: 4em 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* HERO SECTION */
+
+.hero {
+    background-image: url(/img/Strawberries-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    text-align: left;
+    padding: 8em, 0, 4em, 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+    font-weight: 500;
+    padding: 0 10px 13px 19px;
+    margin-top: 1em;
+    margin-bottom: .25em;
+    color: darkslategray;
+    font-size: 5em;
+    border: 3px solid white;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    // text-shadow: 3px 0px 2px white;
+    }
+    p {
+        margin-bottom: 1em;
+        font-size: 1.75em;
+    }
+    .button {
+        margin-bottom: 4em;
+    }
+}

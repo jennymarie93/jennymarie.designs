@@ -1,0 +1,18 @@
+/* HELPERS */
+
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.fade-in-text {
+    animation: fadeIn ease-in 1.25s;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateX(-100px);}
+    to {opacity:1;}
+}
+
+

@@ -1,0 +1,42 @@
+/* RESET BODY */ 
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */ 
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* RESPONSIVE TYPOGRAPHY */
+// SMALL
+body { font-size:87.5%;}
+
+@media (min-width: $breakpoint-small) {
+    body { font-size: 100%; }
+
+    .container-left {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1em;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    body { font-size: 112.5%; }
+
+    .container-left {
+        max-width: 1000px;
+        margin: 0 auto 0 10em;
+        padding: 0 1em;
+    }
+}

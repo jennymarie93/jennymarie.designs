@@ -1,0 +1,69 @@
+/* BUTTONS */
+button {
+    font-size: inherit;
+  }
+
+  button,
+  a.button {
+    display: inline-block;
+    background-color: $accent-color-strawberry;
+    border: 1px solid $accent-color-strawberry;
+    color: #fff;
+    padding: 0.75em 1em;
+    border-radius: 0.75em;
+    margin: 0.5em 0;
+    border: none;
+    cursor: pointer;
+    line-height: 1em;
+    text-decoration: none;
+    font-family: $type-base;
+  }
+  
+  button.alt,
+  a.button.alt {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid $accent-color-yellow;
+    color: $accent-color-yellow;
+  }
+  
+  button:hover,
+  a.button:hover {
+    background-color: $accent-color-turquoise;
+    color: #fff;
+    border-color: $accent-color-turquoise;
+    text-decoration: none;
+    border-radius: 1em;
+    font-style: italic;
+  }
+
+/* LINKS */
+
+a {
+  color: $accent-color-orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $accent-color-blue;
+}
+
+summary {
+  display: inline-block;
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 0.75em;
+  margin: 0.5em 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none;
+  font-family: $type-base;
+  background-color: $accent-color-strawberry;
+  border: 1px solid $accent-color-strawberry;
+}
+
+summary:hover {
+  background-color: $accent-color-turquoise;
+  border: 1px solid $accent-color-turquoise;
+}
+ 
