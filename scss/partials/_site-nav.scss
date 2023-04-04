@@ -19,8 +19,12 @@
 
 .site-header {
 
+    position: fixed;
+    z-index: 20;
+
     .site-nav {
 
+    
         ul {
             background-color: rgba(0, 0, 0, .8);
             position: absolute;
@@ -66,7 +70,7 @@
                 display: block;
 
                 rect {
-                    fill: white;
+                    fill: $accent-color-strawberry;
                 }
             }
         }

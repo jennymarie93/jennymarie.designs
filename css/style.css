@@ -96,8 +96,7 @@ hr {
   border: 0;
   max-width: 80%;
   height: 1px;
-  margin: 3em auto;
-  background: rgb(161, 161, 161);
+  margin: 4em auto;
 }
 
 /* HELPERS */
@@ -197,10 +196,172 @@ summary:hover {
   border: 1px solid rgb(33, 181, 166);
 }
 
+#categories {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.clr:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#categories li {
+  position: relative;
+  list-style-type: none;
+  width: 27.8571428571%; /* = (100-2.5) / 3.5 */
+  padding-bottom: 32.1676014517%; /* =  width /0.866 */
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate(-60deg) skewY(30deg);
+  transform: rotate(-60deg) skewY(30deg);
+}
+
+#categories li:nth-child(3n+2) {
+  margin: 0 1%;
+}
+
+#categories li:nth-child(6n+4) {
+  margin-left: 0.5%;
+}
+
+#categories li:nth-child(6n+4), #categories li:nth-child(6n+5), #categories li:nth-child(6n+6) {
+  margin-top: -6.9285714285%;
+  margin-bottom: -6.9285714285%;
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+#categories li:nth-child(6n+4):last-child, #categories li:nth-child(6n+5):last-child, #categories li:nth-child(6n+6):last-child {
+  margin-bottom: 0%;
+}
+
+#categories li * {
+  position: absolute;
+  visibility: visible;
+}
+
+#categories li > div {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
+  -webkit-backface-visibility: hidden;
+}
+
+/* HEX CONTENT */
+#categories li img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#categories div h1, #categories div p {
+  width: 90%;
+  padding: 0 5%;
+  background-color: #008080;
+  background-color: rgba(0, 128, 128, 0.8);
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
+  -webkit-transition: top 0.2s ease-out, bottom 0.2s ease-out, 0.2s padding 0.2s ease-out;
+  transition: top 0.2s ease-out, bottom 0.2s ease-out, 0.2s padding 0.2s ease-out;
+}
+
+#categories li h1 {
+  bottom: 110%;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.5em;
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+#categories li h1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 45%;
+  width: 10%;
+  text-align: center;
+  z-index: 1;
+  border-bottom: 2px solid #fff;
+}
+
+#categories li p {
+  padding-top: 50%;
+  top: 110%;
+  padding-bottom: 50%;
+}
+
+/* HOVER EFFECT  */
+#categories li div:hover h1 {
+  bottom: 46%;
+  padding-bottom: 10%;
+}
+
+#categories li div:hover p {
+  top: 50%;
+  padding-top: 10%;
+}
+
+#fork {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 0.5em 0.7em;
+  margin: 1%;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  overflow: hidden;
+}
+
+#fork:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateX(-100%) skewX(-45deg);
+          transform: translateX(-100%) skewX(-45deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#fork:hover {
+  color: #fff;
+}
+
+#fork:hover:before {
+  -webkit-transform: translateX(0) skewX(-45deg);
+          transform: translateX(0) skewX(-45deg);
+}
+
 /* RESPONSIVE IMAGES */
 img {
   max-width: 100%;
   height: auto;
+}
+
+.flag:hover {
+  background-color: green;
 }
 
 /* HELPERS */
@@ -240,6 +401,11 @@ img {
 body {
   margin: 0;
   overflow-x: hidden;
+  background-image: url(/img/Strawberries-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
 }
 
 /* CONTAINER */
@@ -247,6 +413,23 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1em;
+}
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 4em;
+  border-radius: 40px;
+  z-index: 5;
+}
+
+#section1,
+#section2,
+#section3,
+#section4,
+#section5,
+#section6 {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* MEDIA QUERIES */
@@ -264,6 +447,12 @@ body {
     margin: 0 auto;
     padding: 0 1em;
   }
+  .card {
+    max-width: 80%;
+    margin: auto;
+    padding: 1em 2em;
+    border-radius: 40px;
+  }
 }
 @media (min-width: 1250px) {
   body {
@@ -273,6 +462,12 @@ body {
     max-width: 1000px;
     margin: 0 auto 0 10em;
     padding: 0 1em;
+  }
+  .card {
+    max-width: 75%;
+    margin: auto;
+    padding: 1em 3em;
+    border-radius: 40px;
   }
 }
 /* SEMANTIC GRID */
@@ -422,7 +617,7 @@ body {
 
 /* SITE FOOTER */
 .site-footer {
-  background: rgb(248, 219, 114);
+  background: rgb(33, 181, 166);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,10 +643,6 @@ section {
 
 /* HERO SECTION */
 .hero {
-  background-image: url(/img/Strawberries-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
   text-align: left;
   padding: 8em, 0, 4em, 0;
   min-height: 100vh;
@@ -472,7 +663,6 @@ section {
   margin-bottom: 0.25em;
   color: darkslategray;
   font-size: 5em;
-  border: 3px solid white;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 .hero p {
@@ -481,6 +671,16 @@ section {
 }
 .hero .button {
   margin-bottom: 4em;
+}
+
+.frgrd {
+  max-height: 20vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
 }
 
 /* SITE-NAV */
@@ -498,6 +698,10 @@ section {
   line-height: 1;
 }
 
+.site-header {
+  position: fixed;
+  z-index: 20;
+}
 .site-header .site-nav ul {
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -549,7 +753,7 @@ section {
   display: block;
 }
 .site-header .site-nav .menu-button svg rect {
-  fill: white;
+  fill: rgb(202, 20, 47);
 }
 .site-header .site-nav .menu-button svg.simple-x-animation rect {
   -webkit-transform-origin: center;
