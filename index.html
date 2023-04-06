@@ -40,9 +40,8 @@
 
             <ul>
                 <li><a href="#section1">About Me</a></li>
-                <li><a href="#section2">Print Work</a></li>
-                <li><a href="#section3">Branding & Identity</a></li>
-                <li><a href="#section4">Lettering & Illustration</a></li>
+                <li><a href="/print.html">Print Work</a></li>
+                <li><a href="#section3">Logos & Branding</a></li>
                 <li><a href="#section5">Gallery</a></li>
             </ul>
         </nav>
@@ -58,15 +57,14 @@
             <div class="container-left">
                 <div class="fade-in-text ">
                     <h1 class="headline">
-                        Jenny Marie's
+                        Jenny Marie
                     </h1>
                     <p class="subheadline">
-                        Design Portfolio.
+                        Design Portfolio
                     </p>
                     <a href="#section1" class="button">About</a>
-                    <a href="#section2" class="button">Print</a>
+                    <a href="/print.html" class="button">Print</a>
                     <a href="#section3" class="button">Branding</a>
-                    <a href="#section4" class="button">Lettering</a>
                     <a href="#section5" class="button">Gallery</a>
                 </div>
             </div>
@@ -97,11 +95,27 @@
 
                 </div>
 
+           
+           
+                  
+                </div>
             </div>
 
         </section>
 
 
+        <section id="section-tile" > 
+
+
+            
+            <a href="#section2" class="button square-tile print">Print Work</a>
+      
+            <a href="#section3" class="button square-tile logo">Logos & Branding</a>
+         
+            <a href="#section5" class="button square-tile gallery">Gallery Archive</a>
+
+        </section>
+         
    
 
         <section id="section2">
@@ -164,13 +178,13 @@
 
             <div class="container">
 
-                <div class="row card">
+                <div class="row">
 
-                    <div class="one-half">
+                    <div class="one-third">
                         <img src="img/laperla.svg" width="1600" height="1200" alt="Logo graphic of a pink lace moth">
                     </div>
 
-                    <div class="one-half">
+                    <div class="two-thirds">
                         <h3>La Perla Logo Redesign</h3>
                         <p>
                             La Perla is an Italian luxury lifestyle company founded by corset-maker Ada Masotti in Bologna Italy, 1954. Bologna is an Italian town renowned for its tradition of silk factories and textile manufacturers. Their <a href="https://laperla.com/">current logo</a> is typographic in nature, rather than symbolic. 
@@ -197,9 +211,7 @@
                                 
                             </div>
 
-                            <div class="row">
-
-                                
+                            <div class="row animate-on-scroll from-left">
 
                                 <div class="one-third">
                                     <img src="img/SVG/pearl.svg" width="600" height="600" alt="Old Flag Design">
@@ -212,14 +224,11 @@
                                         This concept was designed with the word "classic" in mind. The shell of the oyster was meant to embody the structure of a corset, honoring Ada Masotti’s background as a corsetière. The brand name reflected the elegant way in which she would package her products, the reveal being compared to finding a pearl in the oyster - a precious jewel. This design was paired with Superior Title Light, a serif typeface that is both simple and elegant.</p>
                                 </div>
 
-                                <div class="one-third">
-                                   
-                                </div>
 
                             </div>
 
                             
-                            <div class="row">
+                            <div class="row animate-on-scroll" >
             
                                 <div class="two-thirds">
                                     <h3>Italian Grey Wolf</h3>
@@ -234,7 +243,7 @@
 
                             </div>
 
-                            <div class="row">
+                            <div class="row animate-on-scroll">
                                 <div class="one-third"> 
                                     <img src="img/SVG/moth.svg" width="1600" height="1200" alt="Old Flag Design">
                                 </div>
@@ -317,6 +326,16 @@
         </nav>
     </footer>
 
+     <!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
+     <script src="js/smooth-scroll.polyfills.min.js"></script>
+     <script>
+         var scroll = new SmoothScroll('a[href*="#"]', {
+             speed: 800,
+             speedAsDuration: true
+         });
+     </script>
+ 
+
     <!--- MAIN JS SCRIPT .JS -->
     <script src="js/script.js"></script>  
 
@@ -324,14 +343,5 @@
 
 </html>
 
-    <!-- <script src="js/script.js" /> -->
 
-    <!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
-    <script src="js/smooth-scroll.polyfills.min.js"></script>
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 800,
-            speedAsDuration: true
-        });
-    </script>
-
+   

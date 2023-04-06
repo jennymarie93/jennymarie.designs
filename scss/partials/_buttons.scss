@@ -98,3 +98,40 @@ summary:hover {
   border: 1px solid $accent-color-turquoise;
 }
  
+
+
+.square-tile {
+  height: 400px;
+  width: 400px!important;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  margin: 0 auto !important;
+  padding: 3em auto !important;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  font-family: mr-eaves-modern, sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-radius: 0 !important;
+  border: 9px solid white !important;
+  border-style: double !important;
+}
+
+#section-tile {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.button.print {
+  background-image: url(/img/book-trilogy-square.jpg);
+  background-color: transparent !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
