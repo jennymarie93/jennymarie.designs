@@ -2,12 +2,6 @@
 
 body {
     margin: 0;
-    overflow-x: hidden;
-    background-image: url(/img/Strawberries-1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
 }
 
 /* CONTAINER */ 
@@ -16,6 +10,13 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1em;
+}
+
+.container-center {
+    margin: 0 auto;
+    padding: 0;
+    position: center;
+    text-align: center;
 }
 
 .container-full {
@@ -34,16 +35,30 @@ body {
 
 
 
-#section1 {
-    background-color: rgba(0,0,0,.95);
-    color: white;
-   
-
+.hawaii {
+    background-image: url(/img/general/hawaii-1.jpg);
+    color: darkslategrey;
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 150%;
+    width: 100%;
 }
 
 
 
-#sections
+
+
+
+
+
+
+// #section2, #section3, #section4, #section5  {
+//     padding-top: 7em;
+//     padding-bottom: 7em;
+// }
 
 
 
@@ -64,14 +79,6 @@ body {
 
 
 
-
-#section2,
-#section3,
-#section4,
-#section5,
-#section6 {
-    background-color: rgba(255,255,255,.95);
-}
 
 
 

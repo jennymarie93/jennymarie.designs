@@ -7,12 +7,26 @@ body {
     color: $type-color; 
 }
 
-h1, h2, h3 {
+h1 {
     font-family: $type-heading;
+    margin: 0 0 .5em 0;
+    max-width: $type-linewidth;
+    font-weight: 900;
+    font-style: normal;
+} 
+
+h2 {
+    font-family: $type-subheading;
     margin: 0 0 .5em 0;
     max-width: $type-linewidth;
     text-transform: uppercase;
     letter-spacing: 10px;
+} 
+
+h3 {
+    font-family: $type-heading;
+    margin: 0 0 .5em 0;
+    max-width: $type-linewidth;
 } 
 
 h4 {
@@ -43,6 +57,7 @@ h6 { font-size: 1em; line-height: 1.5em;} /* 16 / 16 = 1em */
 p {
     margin: 0 0 .5em 0;
     max-width: $type-linewidth;
+
 }
 
 /* HORIZONTAL RULE */
@@ -61,16 +76,22 @@ hr {
     font-weight: 300;
     color: $accent-color-blue;
     margin: 0;
+    text-align: left;
 }
 
 .subheadline {
     font-family: $type-subheading;
     font-size: 2.5em;
-    font-weight: 200;
-    font-style: italic;
-    color: black;
+    font-weight: 400;
+    font-style: normal;
+    color: $accent-color-red;
     margin: 0.25em 0 0.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: right;
 }
+
+
 
 /* SECTION HEADING */
 

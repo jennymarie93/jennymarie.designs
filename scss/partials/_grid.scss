@@ -5,8 +5,9 @@ $gridgap: 2%;
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -($gridgap / 2);
-    margin-right: -($gridgap / 2);
+    flex-direction: row;
+    // margin-left: -($gridgap / 2);
+    // margin-right: -($gridgap / 2);
     align-items: center;
     margin-bottom: 3em;
 
@@ -53,31 +54,115 @@ $gridgap: 2%;
     &.edgy { 
         margin: 0;
         align-items: stretch; 
+        
+
+        &.white { 
+            background-color: white;
+            margin: 20% 0 20% 0 !important; 
+            padding: 30px 15% 30px 15%  !important;
+            width: 100%; 
+            
+
+            h3 {
+                font-size: 4em;
+                line-height: .85;
+                color: rgba(0, 0, 0, .9);
+                padding-bottom: .3em;
+                text-align: center;
+            }
+
+            h4 {
+                font-size: 1.5em;
+                font-family: $type-subheading;
+                margin: 0 0 .5em 0;
+                text-transform: none;
+                letter-spacing: 0px;
+                color: $accent-color-red;
+                text-align: left;
+            }
+
+            p {
+                padding-bottom: 1em;
+                font {
+                    font-family: $type-heading;
+                    padding: 0;
+                    font-size: 150%;
+                    
+                }
+            }
+            
+        }
+
         .auto-fit {
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+    
+       
+        .text-column-right, 
+        .text-column-left {
+            
+           padding-left: 10%;
+           align-items: center;
+           height: 50% !important;
+           width: 50% !important;
+           object-fit: none;
+           margin: auto;
+
+            h3 {
+                font-size: 3em;
+                line-height: .5;
+                
+            }
 
         }
-       
-        .text-column {
-            padding: 3em;
-        }
+          
+
         > * { 
             margin: 0;
-            background-color: pink;
         }
+
+   
 
         @media (min-width: $breakpoint-small) {
             .one-half { width: 50%; }
             .one-third { width: 33.3333%; }
+            &.white { 
+                width: 70%; 
+                h3 {
+                    font-size: 5em;
+                    line-height: .85;
+                    padding-bottom: .5em;
+                }
+            }
+
             > * {
                 flex-grow: 1;
-                background-color:green;
             }
         }
 
+        .rainbow {
+            background-color: $accent-color-red;
+            background-image: linear-gradient(
+                45deg, $accent-color-red 16.666%, $accent-color-orange 16.666%, 
+                $accent-color-orange 33.333%,$accent-color-yellow 33.333%, 
+                $accent-color-yellow 50%, $accent-color-green 50%,  $accent-color-green 66.666%,$accent-color-blue 66.666%, 
+                $accent-color-blue 83.333%,
+                $accent-color-purple 83.333%);
+            background-size: 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+          }
+          
+          .gradient-text:hover{
+              animation: rainbow-text-simple-animation 1s ease-in forwards;
+          }
+        
     }
  
     
