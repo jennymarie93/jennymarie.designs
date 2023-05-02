@@ -56,6 +56,7 @@ a:hover {
 }
 
 details {
+  margin: 0 auto;
   p {
     line-height: 1;
     padding: 10px 0;
@@ -68,7 +69,7 @@ summary {
   color: #fff;
   padding: 0.75em 1em;
   border-radius: 7px;
-  margin: 0.5em 0;
+  margin: 0 auto;
   cursor: pointer;
   line-height: 1em;
   text-decoration: none;
@@ -77,9 +78,9 @@ summary {
   font-weight: bolder;
 
   
-
+// AKA RAINBOW BUTTON
   &.boop {
-
+    margin: 0 auto;
     background-image: linear-gradient(45deg,
       $accent-color-red 16.666%, 
       $accent-color-orange 16.666%, 
@@ -106,9 +107,16 @@ summary {
       border-radius: 5px;
       font-size: 1em;
       padding: 10px;
+
+      &:hover {
+        background: none;
+        color: white;
+      }
     }
   }
+ 
 }
+
 
 
 

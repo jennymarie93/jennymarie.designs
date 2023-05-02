@@ -26,40 +26,6 @@ body {
     padding: 0;
 }
 
-.card {
-    width: 95%;
-    margin: 0 auto;
-    padding: 0 4em;
-    z-index: 5;
-}
-
-
-
-.hawaii {
-    background-image: url(/img/general/hawaii-1.jpg);
-    color: darkslategrey;
-    overflow-x: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    height: 150%;
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
-// #section2, #section3, #section4, #section5  {
-//     padding-top: 7em;
-//     padding-bottom: 7em;
-// }
-
 
 
 .animate-on-scroll.from-left[data-sectionstate='active'] > *:nth-child(1) {
@@ -73,21 +39,16 @@ body {
    
 }
 
-// .animate-on-scroll.from-left[data-sectionstate='active'] > *:nth-child(2) {
-//     border: 10px solid blue;
-// }
-
-
-
-
-
-
 
 /* MEDIA QUERIES */
 
 /* RESPONSIVE TYPOGRAPHY */
 // SMALL
-body { font-size:87.5%;}
+body { 
+    font-size:87.5%;
+    overflow-x: hidden;
+
+}
 
 @media (min-width: $breakpoint-small) {
     body { font-size: 100%; }
