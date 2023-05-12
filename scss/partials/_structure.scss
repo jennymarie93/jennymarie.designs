@@ -52,11 +52,14 @@ section {
     img {
         min-width: 100vw;
         height: auto;
+        &.padding {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
         &.center {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            
             &.small {
                 max-width: 50vw;
                 min-width: 50vw;

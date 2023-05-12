@@ -760,6 +760,10 @@ section img {
   min-width: 100vw;
   height: auto;
 }
+section img.padding {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 section img.center {
   display: block;
   margin-left: auto;
