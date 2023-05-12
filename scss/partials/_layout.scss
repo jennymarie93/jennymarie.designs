@@ -26,64 +26,76 @@ body {
     padding: 0;
 }
 
-
-
-.animate-on-scroll.from-left[data-sectionstate='active'] > *:nth-child(1) {
-    transform: translate(0,0);
-    opacity: 1;
-}
-
-.animate-on-scroll.from-left[data-sectionstate='inactive'] > *:nth-child(1) {
-    transform: translate(-60px, 0);
-    opacity: 0;
-   
-}
-
-
 /* MEDIA QUERIES */
 
 /* RESPONSIVE TYPOGRAPHY */
-// SMALL
+// SMALLs
+
 body { 
     font-size:87.5%;
     overflow-x: hidden;
+    .card-right {
+        max-width: 60%;
+        margin-right: 0;
+
+    }
+    .card-left {
+        max-width: 60%;
+        margin-left: 5vw;
+
+    }
+    .card-center{
+        max-width: 60%;
+        margin-right: auto;
+    }
+    @media (min-width: $breakpoint-small) {
+        font-size: 100%;
+        .card-right {
+            max-width: 60%;
+            margin-right: 0;
+        }
+        .card-left {
+            max-width: 60%;
+            margin-left: 5vw;
+        }
+        .card-center{
+            max-width: 60%;
+            margin: 0 auto;
+        }
+    }
+    @media (min-width: $breakpoint-medium) {
+        font-size: 106.25%; 
+        .card-right {
+            max-width: 60%;
+            margin-right: 0;
+        }
+        .card-left {
+            max-width: 60%;
+            margin-left: 5vw;
+        }
+        .card-center{
+            max-width: 60%;
+            margin: 0 auto;
+        }
+    }
+    @media (min-width: $breakpoint-large) {
+        font-size: 112.5%;
+        .card-right {
+            max-width: 60%;
+            margin-right: 0;
+        }
+        .card-left {
+            max-width: 60%;
+            margin-left: 5vw;
+        }
+        .card-center{
+            max-width: 60%;
+            margin: 0 auto;
+        }
+    }
+
 
 }
 
-@media (min-width: $breakpoint-small) {
-    body { font-size: 100%; }
-
-    .container-left {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 1em;
-    }
-
-    .card {
-        max-width: 80%;
-        margin: auto;
-        padding: 1em 2em;
-        border-radius: 40px;
-    }
-
-   
-}
 
 
-@media (min-width: $breakpoint-large) {
-    body { font-size: 112.5%; }
-
-    .container-left {
-        max-width: 1000px;
-        margin: 0 auto 0 10em;
-        padding: 0 1em;
-    }
-
-    .card {
-        max-width: 75%;
-        margin: auto;
-        padding: 1em 3em;
-        border-radius: 40px;
-    }
-
-}

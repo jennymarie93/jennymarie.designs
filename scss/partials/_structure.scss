@@ -48,6 +48,53 @@ section {
     display: block;
     align-items: center;
     z-index: 1000;
+    
+    img {
+        min-width: 100vw;
+        height: auto;
+        &.center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            &.small {
+                max-width: 50vw;
+                min-width: 50vw;
+            }
+            &.medium {
+                max-width: 80vw;
+                min-width: 80vw;   
+                &.white {
+                    background-color: white;
+                }
+            }
+        }
+    }
+    .intro {
+        min-height: 100vh; 
+        h1.title {
+            padding-top: 15%;
+            font-size: 6em;
+            line-height: .65;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        blockquote {
+            font-size: 3em;
+            margin: 0 auto;
+            align-items: center;
+            text-align: left;
+            line-height: 1;
+            max-width: 40vw;
+            background-color: black;
+            border: 20px solid white, 5px solid black;
+            border-radius: 50px;
+            padding: .5em; 
+        }
+    }
+    
 }
 
 // SCROLL-SNAP
@@ -85,110 +132,77 @@ section {
 /* HERO SECTION */
 
 .hero {
-    text-align: right;
+    text-align: center;
     min-height: 100vh;
-    align-items: right;
-    top: 0;
-    right: 0;
-    position: absolute;
-    h1 {
-        font-weight: 500;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        color: black;
-        font-size: 4em;
-        line-height: .5;
-        margin: 0;
-        &.designs {
-            font-size: 2.75em;
-            padding-top: 1.5%;
-        }
-    } 
-    h2 {
-        &.zuniga {
-            transform: translateX(5px);
+    align-items: center;
+    .intro-card {
+        margin: 40% auto;
+        max-width: 30%;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 1em;
+        color: white;
+        h2.designs {
+            font-weight: 500;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            color: white;
+            font-size: 4em;
+            line-height: .5;
             margin: 0;
-            padding-top: 0;
-            font-size: 2.25em;
-            font-family: $type-subheading;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            color: black;
-        }
-    
-    } 
-    @media (min-width: $breakpoint-small) {
-        h1 {
-            color: black;
-            font-size: 4em;
-            &.designs {
-                font-size: 3em;
-                padding-top: 2%;
-            } 
-        }
-        h2.zuniga {
-            font-size: 2.5em;
-        }
-        > * {
-            flex-grow: 1;
-        }
+        } 
     }
-    @media (min-width: $breakpoint-medium) {
-        h1 {
-            color:black;
-            font-size: 4em;
-            &.designs {
-                font-size: 3em;
-                padding-top: 2%;
-            }  
-        }
-       
-        > * {
-            flex-grow: 1;
-        }
+    #myVideo {
+        z-index: 0;
+        top: 0;
+        left: 0;
     }
-    @media (min-width: $breakpoint-large) {
-        h1 {
-            color: black;
-            font-size: 9em;
-            &.designs {
-                font-size: 5em;
-                padding-top: 2.5%;
-            } 
-        }
-        h2.zuniga {
-            font-size: 5em;
-            letter-spacing: .4em;
-        }
-        
-        > * {
-            flex-grow: 1;
-        }
+    video#myVideo2 {
+        opacity: 0;
     }
   
 }
 
 
 
-.hawaii-bkg {
-    background-image: url(/img/general/hawaii-1.jpg);
+.bkg {
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    margin-top:  100vh;
     height: 150%;
     width: 100%;
+    &.hawaii { 
+        margin-top:  100vh;
+        background-image: url(/img/general/hawaii-1.jpg); 
+    }
+    &.buddha { background-image: url(/img/calm/square-buddha.jpg); }
+    &.letters { background-image: url(/img/general/lettering-samples-3.jpg);}
+    &.design-video {
+        video#myVideo2{  
+            min-height: 110vh;
+            min-width: 100vw;
+            position: fixed;
+            overflow-x: hidden;
+            z-index: -100;
+            top: 0;
+            right: 0;
+        }
+    }
 }
+
 
 .strip {
     margin: 0;
     padding: 1em 0;
     
+    
     &.red-50 {
         background-color: $red-50;
         color: white;
+        text-align: center;
         &.top{
             margin: 25% 0;
         }
@@ -196,6 +210,12 @@ section {
     }
     &.orange-50 {
         background-color: $orange-50;
+        color: white;
+        margin: 3em;
+        &.top{
+            margin: 25% 0;
+  
+        }
     }
     &.yellow-100 {
         background-color: $accent-color-yellow;
@@ -226,21 +246,46 @@ section {
         }
     }
     &.black-50 {
-        background-color: rgba(0, 0, 0, 0.5);
-        margin-left: 5vw;
+        background-color: rgba(0, 0, 0, 0.8);
         color: white;
-        
         &.top {
             margin-top: 20%;
             margin-bottom: 20%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            
         }
+        h2 {
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            max-width: 37em;         
+        }
+        p {
+            text-align: left;
+            margin: 0 auto;
+            font {
+                font-family: $type-heading;
+                padding: 0;
+                line-height: 1.25;
+                font-size: 2em;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        &:active {
+            background-color: white;
+            color:rgba(0,0,0, .9);
+            .rainbow-2 {
+                text-shadow: -1px -1px black;
+            }
+        }
+        
     }
-    
-    
 }
 
 #myself {
-   
     h1 {
         
         &.hi{
@@ -277,73 +322,38 @@ section {
         max-width: 30%;
     }
 
-    p {
-        margin: 0;
-        margin-left: 5vw;
-        &:hover {
-            background-color: white;
-        }
+    .row.stacked {
         
-        font {
-            font-family: $type-heading;
+        .p {
+            background-color: white;
+            padding: 5vw;
+            border-radius: 10%;
+            border: white;
+            margin-bottom: 10vw;
+        }
+    
+        p {
+            margin: 0;
             padding: 0;
-            line-height: 1.25;
+           
+            &:hover {
+                background-color: white;
+            }
+            
+            
+        }
+    
+        h3 {
             font-size: 2.75em;
-            max-width: 100%;
-            text-align: center;
+            color: white;
+            padding: 0;
+            margin: 0;
         }
     }
+   
 
-    h3 {
-        font-size: 2.75em;
-        color: white;
-        padding: 0;
-        margin: 0;
-    }
-    .row.edgy {
-        margin-bottom: 15vw;
-        .one-half {
-            max-width: 47.5vw;
-            &.auto-fit.white-50 {
-                background-color: rgba(255, 255, 255, 0.95);
-                max-height: 47.5vw;
-                margin-bottom: 0;
-                
-                .p {
-                    max-width: 43vw;
-                    padding-top: 1em;
-                    &.contact {
-                        summary{
-                            margin-left: 12.5em;
-                        }
-                        details {
-                            p{
-                                font-size: 1.25em;
-                                padding: 0 30px;
-                            }
-                        }
-                        
-                    }
-                } 
-            }
-            &.auto-fit img {
-                margin-left: 5vw;
-                max-width: 47.5vw;
-                margin-top: 0;
-                height: auto;
-                // &.cat {
-                //     width: 47.5vw;
-                //     height: auto;
-                //     padding: 0;
-                //     margin: 0;
-                //     &.nala {
-                //         margin-left: 5vw;
-                //     }
-                // }
-            }
-        }
        
-    }
+    
   
 
    
@@ -523,120 +533,12 @@ section {
     }
 }
 
-
-@media (min-width: $breakpoint-small) {
-   
-    > * {
-        flex-grow: 1;
-    }
-}
-@media (min-width: $breakpoint-medium) {
-   
-    > * {
-        flex-grow: 1;
-    }
-}
-@media (min-width: $breakpoint-large) {
-   
-    > * {
-        flex-grow: 1;
-    }
-}
-
-#letters {
-    background-image: url(/img/general/lettering-1.jpg);
-    background-position: middle center fixed relative;
-    background-size: contain;
-}
-
-
-#design {
-   
+#branding {
+    min-height: 100vh;
+    min-width: 100%;
     
-    video#myVideo2{
-        position: fixed relative;
-        bottom: 0;
-        right: auto;
-        left: auto;
-        min-height: 100vh;
-        width: auto;
-        z-index: 0; 
-        overflow-x: hidden;
-        
-    }
-    &.row.edgy.extra {
-        position: fixed absolute;
-        z-index: 500;
-        
-    }
-    
-    @media (min-width: $breakpoint-small) {
-   
-        > * {
-            flex-grow: 1;
-        }
-    }
-    @media (min-width: $breakpoint-medium) {
-       
-        > * {
-            flex-grow: 1;
-        }
-    }
-    @media (min-width: $breakpoint-large) {
-       
-        > * {
-            flex-grow: 1;
-        }
-    }
-}
-
-
-
-
-
-
-#branding.left {
-
-    
-
     .row {
         margin: 0;
-
-        &.edgy.extra.intro {
-            background-image: url(/img/calm/square-buddha.jpg);
-            overflow: hidden;
-            background-size: 100vw;
-            background-repeat: no-repeat;
-            background-position: bottom right;
-            background-attachment: fixed;
-            min-height: 120vh;
-            min-width: 100%;
-            left: 5vw;
-            z-index: 20;
-            bottom: 0;
-            blockquote {
-                font-size: 3em;
-                bottom: 0;
-                left: 1;
-                line-height: 1;
-                max-width: 50vw;
-                background-color: rgba(0,0,0, .5);
-                padding: .5em; 
-                &:hover {
-                    background-color: rgba(0,0,0.6);
-                }
-            }
-            h1.title {
-                padding-top: 37%;
-                z-index: 1000;
-                color:white;
-                font-size: 6em;
-                line-height: .65;
-                margin-left: 5vw;
-              
-            
-            }
-        }
         &.calm {
             background-image: url(/img/calm/calm-square.jpg);
             overflow-x: hidden;
@@ -649,7 +551,6 @@ section {
             left: 0;
             z-index: 20;
         }
-
         &.dark {
             background-color: rgba(0,0,0, .9);
             img {
@@ -677,6 +578,81 @@ section {
         }
     }
 }
+
+@media (min-width: $breakpoint-small) {
+   
+    > * {
+        flex-grow: 1;
+    }
+}
+@media (min-width: $breakpoint-medium) {
+   
+    > * {
+        flex-grow: 1;
+    }
+}
+@media (min-width: $breakpoint-large) {
+   
+    > * {
+        flex-grow: 1;
+    }
+}
+
+#letters {
+
+}
+
+
+
+
+
+#design {
+    margin-top: 0;
+    padding-top: 0;
+    min-height: 100vh;
+    position: absolute;
+    
+   .row-design {
+    text-align: right;
+    padding-top: 0;
+    min-height: 100vh;
+    margin-top: 0;
+    position: fixed absolute;
+    z-index: 100;
+       
+    
+   } 
+    
+  
+    
+    
+    
+    @media (min-width: $breakpoint-small) {
+   
+        > * {
+            flex-grow: 1;
+        }
+    }
+    @media (min-width: $breakpoint-medium) {
+       
+        > * {
+            flex-grow: 1;
+        }
+    }
+    @media (min-width: $breakpoint-large) {
+       
+        > * {
+            flex-grow: 1;
+        }
+    }
+}
+
+
+
+
+
+
+
 
 
 

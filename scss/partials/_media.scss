@@ -3,6 +3,10 @@
 img {
     max-width: 100%;
     height: auto;
+    &.full {
+        min-width: 100vw;
+        height: auto;
+    }
 }
 
 /* RESPONSIVE YOUTUBE VIDEO */
@@ -12,10 +16,6 @@ iframe {
     max-height: 100vh;
 }
 
-#movie {
-    background-color: rgba(0, 0, 0,.85);
-    color: white !important;
-}
 
 /* VIDEO BACKGROUND */
 

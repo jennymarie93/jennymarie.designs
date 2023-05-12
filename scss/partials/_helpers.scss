@@ -6,151 +6,33 @@
     left: -9999px;
 }
 
-.fade-in-text {
-    animation: fadeIn ease-in 1.25s;
+.animate-on-scroll.from-left[data-sectionstate='active'] > *:nth-child(1) {
+    transform: translate(0,0);
+    opacity: 1;
 }
+
+.animate-on-scroll.from-left[data-sectionstate='inactive'] > *:nth-child(1) {
+    transform: translate(-60px, 0);
+    opacity: 0;
+}
+
+.fade-in-text { animation: fadeIn ease-in 1.25s; }
 
 @keyframes fadeIn {
     from {opacity:0; transform: translateX(-100px);}
     to {opacity:1;}
 }
 
-
-// ANIMATE ON SCROLL
-
-
-// .animate-on-scroll > * {
-//     transition: all 2s ease-out 1s;
-// }
-
-// .animate-on-scroll[data-sectionstate='active'] {
-//     opacity: 1;
-// }
-
-// .animate-on-scroll[data-sectionstate='inactive'] {
-//     opacity: 0;
-// }
-
-
-
-// ghostvvvv
-
-// .animate-on-scroll.ghost {
-//     transition:  all 15s;
-
-// }
-
-//  .animate-on-scroll.ghost[data-sectionstate='active'] {
-//     animation: ghost-in 15s no-repeat;
-    
-// }
-
-// .animate-on-scroll.ghost[data-sectionstate='inactive'] {
-//     animation: ghost-out 15s no-repeat;
-// }
-
-// @keyframes ghost-in {
-//     0% { opacity: 0;}
-//     25% { opacity: 0;}
-//     50% {opacity: .5;}
-//     100% {opacity: 1;}
-// }
-
-// @keyframes ghost-out {
-//     0% { opacity: 1;}
-//     25% { opacity: 1;}
-//     50% {opacity: .5;}
-//     100% {opacity: 0;}
-// }
-
-
-
-#loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 5000;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Add animation to "page content" */
-  .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
-  }
-  
-  @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  
-  @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-  
-  // #myDiv {
-  //   display: none;
-  //   text-align: center;
-  //   max-height: 100vh;
-  //   height: 14vh; 
-  //   display: flex;
-  //   flex-direction: column;
-    
-  //   &.a { background-color: $accent-color-red; }
-  //   &.b { background-color: $accent-color-orange; }
-  //   &.c { background-color: $accent-color-yellow; }
-  //   &.d { background-color: $accent-color-green; }
-  //   &.e{ background-color: $accent-color-blue; }
-  //   &.f { background-color: $accent-color-purple; }
-  //   &.g { background-color: indigo;}
-    
-  // }
-
-
-
 @keyframes rainbow-text-simple-animation-rev {
-    0% {
-        background-size: 650%;
-    }
-    40% {
-        background-size: 650%;
-    }
-    100% {
-        background-size: 100%;
-    }
+    0% { background-size: 650%; }
+    40% { background-size: 650%; }
+    100% { background-size: 100%; }
 }
 
 @keyframes rainbow-text-simple-animation {
-    0% {
-        background-size: 100%;
-    }
-    80% {
-        background-size: 1000%;
-    }
-    100% {
-        background-size: 1000%;
-    }
+    0% { background-size: 100%; }
+    80% { background-size: 1000%; }
+    100% { background-size: 1000%; }
 }
 
 
