@@ -352,40 +352,14 @@ iframe {
 
 /* VIDEO BACKGROUND */
 #myVideo {
+  height: auto;
+  width: 105vw;
   position: fixed;
-  bottom: 0;
-  right: auto;
-  left: auto;
-  max-height: 100vh;
-  width: auto;
-  z-index: -500;
-  -webkit-transform: translateX(-600px);
-          transform: translateX(-600px);
   overflow-x: hidden;
-}
-@media (min-width: 768px) {
-  #myVideo {
-    min-width: 100%;
-    -webkit-transform: translateX(-22.5%);
-            transform: translateX(-22.5%);
-    height: 100%;
-  }
-}
-@media (min-width: 1050px) {
-  #myVideo {
-    min-width: 100%;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    height: 100%;
-  }
-}
-@media (min-width: 1250px) {
-  #myVideo {
-    min-width: 100%;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    height: 100%;
-  }
+  z-index: -100;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
 }
 
 /* HELPERS */
@@ -756,6 +730,14 @@ section {
           align-items: center;
   z-index: 1000;
 }
+section video#myVideo-2.padding {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+section video#myVideo-2.padding.less {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 section img {
   min-width: 100vw;
   height: auto;
@@ -763,6 +745,10 @@ section img {
 section img.padding {
   padding-top: 10%;
   padding-bottom: 10%;
+}
+section img.padding.less {
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 section img.center {
   display: block;
@@ -807,6 +793,9 @@ section .intro blockquote {
   border: 20px solid white, 5px solid black;
   border-radius: 50px;
   padding: 0.5em;
+}
+section .intro.large blockquote {
+  max-width: 50vw;
 }
 
 .scroll-snap {
@@ -872,9 +861,6 @@ section .intro blockquote {
   top: 0;
   left: 0;
 }
-.hero video#myVideo2 {
-  opacity: 0;
-}
 
 .bkg {
   overflow-x: hidden;
@@ -895,14 +881,11 @@ section .intro blockquote {
 .bkg.letters {
   background-image: url(/img/general/lettering-samples-3.jpg);
 }
-.bkg.design-video video#myVideo2 {
-  min-height: 110vh;
-  min-width: 100vw;
-  position: fixed;
-  overflow-x: hidden;
-  z-index: -100;
-  top: 0;
-  right: 0;
+.bkg.extra {
+  background-image: url(/img/general/dough.jpg);
+}
+.bkg.gallery {
+  background-image: url(/img/gallery/Proj_1_draft3.png);
 }
 
 .strip {
@@ -916,31 +899,6 @@ section .intro blockquote {
 }
 .strip.red-50.top {
   margin: 25% 0;
-}
-.strip.orange-50 {
-  background-color: rgba(255, 111, 0, 0.7764705882);
-  color: white;
-  margin: 3em;
-}
-.strip.orange-50.top {
-  margin: 25% 0;
-}
-.strip.yellow-100 {
-  background-color: #ffc400;
-  color: white;
-}
-.strip.green-50 {
-  background-color: rgba(164, 203, 10, 0.8901960784);
-  color: white;
-}
-.strip.blue-50 {
-  background-color: rgba(2, 206, 217, 0.9058823529);
-}
-.strip.blue-50 p {
-  color: white;
-}
-.strip.purple-50 {
-  background-color: rgba(140, 72, 161, 0.8039215686);
 }
 .strip.white-50 {
   background-color: rgba(255, 255, 255, 0.95);
@@ -974,6 +932,11 @@ section .intro blockquote {
   padding-bottom: 2%;
   max-width: 37em;
 }
+.strip.black-50 h3.center {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 1%;
+}
 .strip.black-50 p {
   text-align: left;
   margin: 0 auto;
@@ -992,6 +955,9 @@ section .intro blockquote {
 }
 .strip.black-50:active .rainbow-2 {
   text-shadow: -1px -1px black;
+}
+.strip.black-50 video#myVideo-2 {
+  max-width: 100vw;
 }
 
 #myself h1 {
@@ -1279,140 +1245,6 @@ section .intro blockquote {
             flex-grow: 1;
   }
 }
-#design {
-  margin-top: 0;
-  padding-top: 0;
-  min-height: 100vh;
-  position: absolute;
-}
-#design .row-design {
-  text-align: right;
-  padding-top: 0;
-  min-height: 100vh;
-  margin-top: 0;
-  position: fixed absolute;
-  z-index: 100;
-}
-@media (min-width: 768px) {
-  #design > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1050px) {
-  #design > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1250px) {
-  #design > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
-section.left .extra {
-  width: auto;
-  height: 100vh;
-  z-index: 1;
-}
-section.left .extra blockquote {
-  font-size: 3em;
-  margin: 0 0 1.5em 1.5em;
-  line-height: 1;
-  max-width: 9em;
-  background-color: white;
-  border-left: 0;
-  padding: 0.5em 1em;
-}
-section.left .extra h1.title {
-  padding-top: 11%;
-  z-index: 1000;
-  color: black;
-  font-size: 6em;
-  line-height: 0.65;
-  margin: 0 0 0 1em;
-}
-@media (min-width: 768px) {
-  section.left > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1050px) {
-  section.left > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1250px) {
-  section.left > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
-section.right .extra {
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  text-align: right;
-  right: 0;
-  display: block;
-}
-section.right .extra blockquote {
-  font-size: 3em;
-  line-height: 1;
-  max-width: 9em;
-  background-color: rgba(0, 0, 0, 0);
-  border-right: 0;
-  padding: 0.5em 0 0.5em 0.5em !important;
-  right: 0;
-  margin-left: auto;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
-  margin-top: 0;
-}
-section.right .extra h1.title {
-  padding-top: 12%;
-  z-index: 1000;
-  color: white;
-  font-size: 6em;
-  line-height: 0.65;
-  margin: 0 !important;
-}
-section.right .extra.bottom-right {
-  position: absolute;
-}
-@media (min-width: 768px) {
-  section.right > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1050px) {
-  section.right > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-@media (min-width: 1250px) {
-  section.right > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
 /* SITE-NAV */
 .site-header-small .site-id {
   position: fixed;

@@ -20,30 +20,14 @@ iframe {
 /* VIDEO BACKGROUND */
 
 #myVideo {
+    height: auto;
+    width: 105vw;
     position: fixed;
-    bottom: 0;
-    right: auto;
-    left: auto;
-    max-height: 100vh;
-    width: auto;
-    z-index: -500; 
-    transform: translateX(-600px);
     overflow-x: hidden;
-    @media (min-width: $breakpoint-small) {
-        min-width: 100%;
-        transform: translateX(-22.5%);
-        height: 100%;
-    }
-    @media (min-width: $breakpoint-medium) {
-        min-width: 100%;
-        transform: translateX(0px);
-        height: 100%;
-    }
-    @media (min-width: $breakpoint-large) {
-        min-width: 100%;
-        transform: translateX(0px);
-        height: 100%;
-    }
+    z-index: -100;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
 }
 
 
