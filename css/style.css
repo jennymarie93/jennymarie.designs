@@ -766,6 +766,9 @@ section img.center.medium {
 section img.center.medium.white {
   background-color: white;
 }
+section img.center.medium.space {
+  padding-bottom: 2%;
+}
 section .intro {
   min-height: 100vh;
 }
