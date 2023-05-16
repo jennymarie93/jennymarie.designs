@@ -4,7 +4,7 @@
     .site-id {
         position: fixed;
         bottom: 0;
-        right: left;
+     
         svg {
             height: 10vh;
             width: auto;
@@ -21,25 +21,22 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: left;
-            padding-left: 0;
-            margin-top: 0;
+            align-items: center;
+            margin: 0 auto;
             transform: translate(0,0);
             transition: all .3s ease-out;
             z-index: 3000;                  
             background-color: rgba(0, 0, 0, .8);
+            padding-inline-start: 0;
         
             li {
                 opacity: 1!important;
-                align-items: left;
-                text-align: left;
+                text-align: center;
                 font-size: 500%; 
                 padding: 0;
-                margin: .5em;
                 font-family: $type-heading;
                 font-size: 3em;
-                margin: 0;
-                left: 0;
+                margin: 0 auto;
                 width: 100vw;
              
                 a {
@@ -47,51 +44,26 @@
                     margin: 0;
                     &.red {
                         color: $accent-color-red;
-                        &::after {
-                            content: "bout me + my brain.";
-                        }
                     }
                     &.orange {
                         color: $accent-color-orange;
-                        &::after {
-                            content: "randing + logo design.";
-                        }   
                     }
                     &.yellow {
                         color: $accent-color-yellow;
-                        &::after {
-                            content: "reative type + lettering.";
-                        }  
                     }
                     &.green {
                         color: $accent-color-green;
-                        &::after {
-                            content: "esigned by me.";
-                        }  
                     }
                     &.blue {
                         color: $accent-color-blue;
-                        &::after {
-                            content: "xtra shit born from ADHD.";
-                        }
                     }
                     &.purple {
                         color: $accent-color-purple;
-                        &::after {
-                            min-width: 100%;
-                            content: "uck... what was i doing?";
-                        }  
                     }
-                    svg {
-                        fill: white;
-                        z-index: 5000;
-                        width: 1.5em;
-                        height: auto;
-                        line-height: 0;                    
-                        bottom: .5em;
-                        right: .5em;
-                        position: fixed;
+                    &.white {
+                        color: white;
                     }
+                 
                 }
 
             }
@@ -107,31 +79,43 @@
             display: inline-block;
             padding: 3vh .75em;
             line-height: 1;
+            margin: 0 auto;
+            width: 100vw;
         }
 
         .menu-button {
             background-color: rgba(0, 0, 0);
+            width: 100vw;
             border: none;
-            color: pink;
-            padding: 2em;
-            margin: 0;
+            padding: 10px;
+            margin: 0 auto;
             position: fixed;
             z-index: 4000;
             bottom: 0;
-            // width: 20vw;
-            // height: 10vh;
             border-radius: 0;
-            left: 0;
+         
 
-            svg {
-                display: flex;
-                flex-direction: row;
-                // margin: 0 auto;
-
-                rect {
-                    fill: pink;
+            .menu-bar {
+                font-size: .75em;
+                margin: 0 auto;
+                h2.rainbow {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .dots {
+                    font-family: $type-heading;
+                    font-size: 36px;
+                    line-height: 0; 
+                    padding-bottom: 30px;
+                    letter-spacing: 3px; 
+                    right: 0;
+                    text-align: right;
                 }
             }
+
+           
+
+           
         }
     }
     @media (min-width: $breakpoint-small) {
@@ -168,7 +152,7 @@
                 flex-wrap: nowrap;
                 padding: 5vh 1em;
                 max-height: 5vh;
-                background-color: white;
+                background-color: black;
                 transition: 0.3s;
                 margin-top: 0;
                 width:100vw;
